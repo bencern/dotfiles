@@ -64,7 +64,7 @@ Plug 'mhinz/vim-janah'
 Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'
 Plug 'myusuf3/numbers.vim'
-
+Plug 'teto/vim-listchars'
 Plug 'scrooloose/syntastic'
 
 " --- utilities and formatting ---
@@ -80,6 +80,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'godlygeek/tabular'
 Plug 'Yggdroot/indentLine'
+Plug 'rstacruz/vim-hyperstyle'
 
 " --- external interface ---
 Plug 'wakatime/vim-wakatime'
@@ -102,6 +103,9 @@ Plug 'Quramy/ng-tsserver'
 Plug 'lervag/vimtex'
 Plug 'Chiel92/vim-autoformat'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'cespare/vim-toml'
+Plug 'maralla/vim-toml-enhance'
+Plug 'wavded/vim-stylus'
 
 " --- Writers tools ---
 Plug 'reedes/vim-pencil'
@@ -149,7 +153,6 @@ let g:airline#extensions#wordcount#enabled=1
 let g:airline#extensions#syntastic#enabled=1
 let g:airline#extensons#branch#format=1
 let g:airline#extensions#tabline#buffer_idx_mode=1
-let g:airline_section_c = airline#section#create_left(['%{strftime("%y/%m/%d %T")}', '%f'])
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep = ''
@@ -189,6 +192,7 @@ let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1 
 
 " --- Vim Pencil ---
+let g:pencil#wrapModeDefault = "soft"
 augroup pencil
   autocmd!
   autocmd FileType markdown,md call pencil#init()
